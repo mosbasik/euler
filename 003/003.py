@@ -22,7 +22,6 @@ def isPrime(N):
 def greatestPrimeFactor(N):
     rootN = int(math.ceil(math.sqrt(N)))
     for i in range(rootN, 1, -1):
-        print i
         if (N % i == 0):
             if isPrime(i):
                 return i
