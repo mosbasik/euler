@@ -60,5 +60,4 @@ def finder(n, filename):
 
 if __name__ == '__main__':
     n = int(sys.argv[1])
-    # pprint.pprint(finder(n, 'number'))
     print finder(n, 'number')
