@@ -8,6 +8,8 @@
 # Find the product abc.
 
 # Answer:
+# 31875000
+# ./009.py 1000  0.04s user 0.01s system 97% cpu 0.049 total
 
 
 import sys
@@ -29,8 +31,12 @@ def get_pythagorean_triplet():
             b += 1
 
 
+def find(n):
+    for triplet in get_pythagorean_triplet():
+        if sum(triplet) == n:
+            return triplet[0] * triplet[1] * triplet[2]
+
+
 if __name__ == '__main__':
     n = int(sys.argv[1])
-    p = get_pythagorean_triplet()
-    for i in range(n):
-        print next(p)
+    print find(n)
